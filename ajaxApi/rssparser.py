@@ -5,7 +5,7 @@ from django.utils.html import escape
 
 """
     Method to escape an unicode string string
-    @:return Escaped string
+    :returns: Escaped string
 """
 def escapeunicode(str):
     return str.replace('&', '&amp;').replace('<', '&lt;').replace('>', '&gt;').replace('"', '&quot;').replace("'", '&#39;')
@@ -13,7 +13,7 @@ def escapeunicode(str):
 
 """
     RSS Parsing function
-    @returns: feedparser object output
+    :returns: feedparser object output
 """
 def ParseSingleRSSURL(URL):
     data = feedparser.parse(str(URL))
@@ -21,7 +21,7 @@ def ParseSingleRSSURL(URL):
 
 """
     Parse all Feeds from MIXER
-    @returns JSON output
+    :returns: JSON output with all feeds
 """
 def ParseMixerRSS():
     Data = []
@@ -32,7 +32,7 @@ def ParseMixerRSS():
     id=0
     for posts in Data:
         for post in posts.entries:
-            print post.title + " " + post.summary
+           #print post.title + " " + post.summary
             id+=1
             title = post.title.encode("utf-8")
             summary = post.summary.encode("utf-8")

@@ -15,7 +15,7 @@ def GenerateJSONFeeds():
     return '{"response":{"status":"OK","result":['+','.join(result)+']}}'
 
 """
-    Calls @ParseMixerRSS
+    Calls ParseMixerRSS
     :returns: JSON string from parsed RSS URL
 """
 def GenerateJSONPosts():

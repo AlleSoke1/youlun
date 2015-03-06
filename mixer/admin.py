@@ -2,10 +2,12 @@ from django.contrib import admin
 
 # Register your models here.
 from .models import Mixer
-
+"""
+    Class for Admin panel
+"""
 class MixerAdmin(admin.ModelAdmin):
     """
-      Display URL in Admin Panel
+      Display ID and URL in Admin Panel
     """
     list_display = ["id","url"]
 
